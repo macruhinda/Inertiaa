@@ -18,7 +18,7 @@ Button player;
         player.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                playMedia= MediaPlayer.create(getApplicationContext(),R.raw.Inertiasong);
+                playMedia= MediaPlayer.create(getApplicationContext(),R.raw.inertiasong);
                 playMedia.start();
             }
         });
