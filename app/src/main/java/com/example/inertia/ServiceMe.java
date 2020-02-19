@@ -20,7 +20,7 @@ Button player,player1;
             @Override
             public void onClick(View v) {
                 if (playMedia != null && playMedia.isPlaying()) {
-                playMedia.stop();}
+                playMedia.stop();}           
 
             }
         });
