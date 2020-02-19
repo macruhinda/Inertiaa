@@ -23,16 +23,12 @@ public class SohoLoc extends AppCompatActivity {
         textView=findViewById(R.id.theC);
         codeBtn=findViewById(R.id.CodV);
 
-
-        //AssetManager assetManager=getAssets();
-
         codeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String Cods="";
 
                     try{
-                        // files=assetManager.open("addanumber.c");
                         files=getAssets().open("addanumber.c");
                         int chrz=files.available();
                         byte[] macstore=new byte[chrz];
