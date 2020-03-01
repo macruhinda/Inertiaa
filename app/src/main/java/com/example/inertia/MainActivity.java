@@ -22,6 +22,17 @@ import java.io.InputStream;
 public class MainActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
+
+
+      /* Button drk=findViewById(R.id.buttonDrinks);
+        drk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this, Adapter.class);
+                startActivity(intent);
+            }
+        });
+*/
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
