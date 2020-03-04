@@ -2,5 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/Loc" android:title="Location"/>
     <item android:id="@+id/Servicez" android:title="Services Provided"/>
+    <item android:id="@+id/One" android:title="Send Email"/>
+    <item android:id="@+id/two" android:title="Call Me"/>
 
 </menu>
