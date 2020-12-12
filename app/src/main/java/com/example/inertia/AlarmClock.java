@@ -24,6 +24,9 @@ public class AlarmClock extends AppCompatActivity {
     }
 
     public void alarmsetting(View view){
+        MyBroad myBroad= new MyBroad();
+        myBroad.onReceive(getApplicationContext(), getIntent());
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkSelfPermission(Manifest.permission.VIBRATE)
                 != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(new String[]{Manifest.permission.VIBRATE}, 5000);
@@ -33,6 +36,7 @@ public class AlarmClock extends AppCompatActivity {
         int z =Integer.parseInt(editText.getText().toString());
 
         Intent intent= new Intent(getApplicationContext(),MyBroad.class);
+
 
         PendingIntent pendingIntent;
         pendingIntent=PendingIntent.getBroadcast(this.getApplicationContext(),0,intent,0);
