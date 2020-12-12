@@ -24,8 +24,6 @@ public class AlarmClock extends AppCompatActivity {
     }
 
     public void alarmsetting(View view){
-        MyBroad myBroad= new MyBroad();
-        myBroad.onReceive(getApplicationContext(), getIntent());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkSelfPermission(Manifest.permission.VIBRATE)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -46,6 +44,9 @@ public class AlarmClock extends AppCompatActivity {
         alarmManager.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis() + (z* 1000),pendingIntent);
 
         Toast.makeText(this," Your Alarm is set in"+  z +"seconds",Toast.LENGTH_LONG).show();
+        MyBroad myBroad= new MyBroad();
+        myBroad.onReceive(getApplicationContext(), getIntent());
+
 
     }
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
