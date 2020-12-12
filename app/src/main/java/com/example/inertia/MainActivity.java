@@ -64,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.M)
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.alm:
+                startActivity(new Intent(this, AlarmClock.class));
+                return true;
             case R.id.track:
                 startActivity(new Intent(this, ServiceMe.class));
                 return true;
