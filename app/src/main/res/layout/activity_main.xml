@@ -82,7 +82,7 @@
         android:id="@+id/butnDrk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Drinks"
+        android:text="Districts"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/toNamesList"
         app:layout_constraintStart_toStartOf="@+id/toNamesList"

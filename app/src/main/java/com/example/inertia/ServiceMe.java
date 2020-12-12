@@ -21,7 +21,6 @@ Button player,player1;
             public void onClick(View v) {
                 if (playMedia != null && playMedia.isPlaying()) {
                 playMedia.stop();}           
-
             }
         });
         player.setOnClickListener(new View.OnClickListener() {

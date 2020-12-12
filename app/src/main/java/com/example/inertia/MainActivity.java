@@ -3,24 +3,16 @@ package com.example.inertia;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.M)
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.Servicez:
+            case R.id.track:
                 startActivity(new Intent(this, ServiceMe.class));
                 return true;
             case R.id.Loc:
                 startActivity(new Intent(this, SohoLoc.class));
                 return true;
-            case R.id.One:
+            case R.id.mail:
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setData(Uri.parse("mailto:"));
                 String towho[] = {"bvicxbax@gmail.com, markruhinda47@gmail.com"};
@@ -89,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 return true;
 
-            case R.id.two:
+            case R.id.call:
                 Intent man = new Intent(Intent.ACTION_DIAL);
                 man.setData(Uri.parse("tel:0706944635"));
              /*   if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {

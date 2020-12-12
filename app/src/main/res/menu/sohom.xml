@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/Loc" android:title="Location"/>
-    <item android:id="@+id/Servicez" android:title="Services Provided"/>
-    <item android:id="@+id/One" android:title="Send Email"/>
-    <item android:id="@+id/two" android:title="Call Me"/>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Loc"
+        android:title="Code" />
+    <item
+        android:id="@+id/alm"
+        android:title="Reminder" />
+    <item
+        android:id="@+id/track"
+        android:title="Track" />
+    <item
+        android:id="@+id/mail"
+        android:title="Send Email"/>
+    <item
+        android:id="@+id/call"
+        android:title="Call Me"/>
 
 </menu>
