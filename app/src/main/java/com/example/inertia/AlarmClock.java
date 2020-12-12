@@ -45,7 +45,7 @@ public class AlarmClock extends AppCompatActivity {
 
         Toast.makeText(this," Your Alarm is set in"+  z +"seconds",Toast.LENGTH_LONG).show();
         MyBroad myBroad= new MyBroad();
-        myBroad.onReceive(getApplicationContext(), getIntent());
+       // myBroad.onReceive(getApplicationContext(), getIntent());
 
 
     }
