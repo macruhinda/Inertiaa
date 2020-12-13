@@ -3,8 +3,14 @@ package com.example.inertia;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,14 +19,28 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    TextView textView;
 
     private static final boolean TODO = true;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        textView = findViewById(R.id.Blevel);
+       BroadcastReceiver BtryLevel = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                Integer BtryL = intent.getIntExtra(BatteryManager.EXTRA_LEVEL,0);
+                textView.setText(BtryL.toString() + "%");
+
+            }
+        };
+        registerReceiver(BtryLevel, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+
 
         Button Cconsepts = (Button) findViewById(R.id.butnDrk);
         Cconsepts.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("MESSAGE", message.getText().toString());
         startActivity(intent);
         message.setText("");
+
 
 
     }

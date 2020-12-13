@@ -25,7 +25,6 @@
         android:id="@+id/theC"
         android:layout_width="306dp"
         android:layout_height="359dp"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
