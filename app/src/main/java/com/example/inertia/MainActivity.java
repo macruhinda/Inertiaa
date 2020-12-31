@@ -17,12 +17,20 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
     TextView textView;
+    Button commentbtn;
+
 
     private static final boolean TODO = true;
 
@@ -47,6 +55,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TheRecyc.class);
+                startActivity(intent);
+            }
+        });
+
+        Button Ssav = (Button) findViewById(R.id.commentbtn);
+        Ssav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DisplayMessageActivity.class);
                 startActivity(intent);
             }
         });
